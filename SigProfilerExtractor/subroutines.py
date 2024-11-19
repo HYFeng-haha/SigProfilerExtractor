@@ -870,6 +870,13 @@ def pairwise_cluster_raw(
 
 
     """
+    """
+    Haoyue's note:
+    mat1: First signature matrix to compare
+    mat2: Second signature matrix to compare
+    dist: Distance metric ('cosine' or 'correlation')
+    Returns matched signature indices between matrices using linear sum assignment
+    """
 
     if dist == "cosine":
         con_mat = cdist(mat1.T, mat2.T, "cosine")
